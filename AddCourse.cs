@@ -33,7 +33,7 @@ namespace Project
             using SqlConnection conn = new(CISS311_Agile_Gamblers_.Properties.Settings.Default.connString);
             
             using SqlCommand comd = new("INSERT INTO course(courseTitle," +
-                " courseId) VALUES(@courseTitle, @courseId)", conn);
+                " semesterOffered) VALUES(@courseTitle, @semesterOffered)", conn);
             conn.Open();
             comd.Parameters.AddWithValue("@courseTitle", textBox1.Text); //Course Textbox
             comd.Parameters.AddWithValue("@semesterOffered", textBox2.Text); //Semester date
